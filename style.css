@@ -340,5 +340,76 @@ body {
   font-size: clamp(55px, 10vw, 145px);
   line-height: .9;
 
+
+/* SILENT KILL DESCRIPTION PAGE */
+
+.comic-view {
+  overflow-y: auto;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 70px 24px;
+}
+
+.silent-kill-content {
+  width: min(680px, 100%);
+  margin: auto;
+  text-align: center;
+}
+
+.silent-kill-title {
+  margin: 0;
+  font-family: "SoraThin", Arial, sans-serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 100;
+  line-height: 1.4;
+  letter-spacing: .16em;
+}
+
+.silent-kill-content .red-rule {
+  margin: 20px auto 30px;
+}
+
+.silent-kill-description {
+  font-family: "SoraThin", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.9;
+  letter-spacing: .025em;
+  color: #d0caca;
+  text-align: center;
+}
+
+.silent-kill-description p {
+  margin: 0 0 20px;
+  font-family: "SoraThin", Arial, sans-serif;
+  font-size: inherit;
+  font-weight: 100;
+}
+
+.silent-kill-description .silent-kill-ending {
+  color: #fff;
+  letter-spacing: .06em;
+  margin-top: 28px;
+}
+
+.silent-kill-back {
+  margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .comic-view {
+    padding: 45px 22px;
+  }
+
+  .silent-kill-title {
+    font-size: 23px;
+  }
+
+  .silent-kill-description {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+}
+
   letter-spacing: .08em;
 }
