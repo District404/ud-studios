@@ -341,25 +341,44 @@ body {
   line-height: .9;
 
 
-/* SILENT KILL DESCRIPTION PAGE */
+
+/* SILENT KILL: CENTERED LAYOUT */
 
 .comic-view {
-  overflow-y: auto;
-  align-items: flex-start;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 70px 24px;
+
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.comic-view[hidden] {
+  display: none !important;
 }
 
 .silent-kill-content {
-  width: min(680px, 100%);
+  width: 100%;
+  max-width: 680px;
   margin: auto;
+  flex-shrink: 0;
   text-align: center;
 }
 
 .silent-kill-title {
+  width: 100%;
   margin: 0;
+  text-align: center;
   font-family: "SoraThin", Arial, sans-serif;
-  font-size: clamp(22px, 3vw, 30px);
+  font-size: 28px;
   font-weight: 100;
   line-height: 1.4;
   letter-spacing: .16em;
@@ -370,35 +389,37 @@ body {
 }
 
 .silent-kill-description {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
   font-family: "SoraThin", Arial, sans-serif;
   font-size: 13px;
   font-weight: 100;
   line-height: 1.9;
   letter-spacing: .025em;
   color: #d0caca;
-  text-align: center;
 }
 
 .silent-kill-description p {
   margin: 0 0 20px;
-  font-family: "SoraThin", Arial, sans-serif;
-  font-size: inherit;
-  font-weight: 100;
+  text-align: center;
+  font: inherit;
 }
 
 .silent-kill-description .silent-kill-ending {
   color: #fff;
-  letter-spacing: .06em;
   margin-top: 28px;
+  letter-spacing: .06em;
 }
 
 .silent-kill-back {
-  margin-top: 24px;
+  display: block;
+  margin: 24px auto 0;
 }
 
 @media (max-width: 600px) {
   .comic-view {
-    padding: 45px 22px;
+    padding: 30px 20px;
   }
 
   .silent-kill-title {
@@ -409,7 +430,4 @@ body {
     font-size: 12px;
     line-height: 1.85;
   }
-}
-
-  letter-spacing: .08em;
 }
