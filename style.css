@@ -340,8 +340,6 @@ body {
   font-size: clamp(55px, 10vw, 145px);
   line-height: .9;
 
-
-
 /* SILENT KILL PAGE */
 
 #book.comic-view[hidden] {
