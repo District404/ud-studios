@@ -344,50 +344,17 @@ body {
 
 /* SILENT KILL: CENTERED LAYOUT */
 
-.comic-view {
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  box-sizing: border-box;
-  padding: 40px 24px;
-  text-align: center;
-}
 
 .comic-view[hidden] {
   display: none !important;
 }
 
-.silent-kill-content {
-  width: 100%;
-  max-width: 680px;
-  margin: auto;
-  flex-shrink: 0;
-  text-align: center;
-}
 
 .silent-kill-content .red-rule {
   margin: 20px auto 30px;
 }
 
-.silent-kill-description {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  font-family: "SoraThin", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 100;
-  line-height: 1.9;
-  letter-spacing: .025em;
-  color: #d0caca;
-}
+
 
 .silent-kill-description p {
   margin: 0 0 20px;
@@ -401,10 +368,6 @@ body {
   letter-spacing: .06em;
 }
 
-.silent-kill-back {
-  display: block;
-  margin: 24px auto 0;
-}
 
 @media (max-width: 600px) {
   .comic-view {
@@ -424,39 +387,92 @@ body {
 
 /* FINAL SILENT KILL TITLE FIX */
 
+
+/* SILENT KILL: CENTER EVERYTHING */
+
+#book.comic-view {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#book.comic-view[hidden] {
+  display: none !important;
+}
+
 #book .silent-kill-content {
-  width: min(680px, 100%);
-  margin: 0 auto;
-  text-align: center !important;
+  width: 100%;
+  max-width: 680px;
+  margin: auto;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 #book h3.silent-kill-title {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  text-align: center !important;
 
   font-family: "SoraThin", Arial, sans-serif !important;
   font-size: 18px !important;
   font-weight: 100;
   line-height: 1.4;
   letter-spacing: .16em;
-  text-transform: uppercase;
-}
-
-#book .silent-kill-description,
-#book .silent-kill-description p {
-  width: 100%;
   text-align: center !important;
 }
 
 #book .red-rule {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 30px;
+}
+
+#book .silent-kill-description {
+  width: 100%;
+  margin: 0;
+  text-align: center !important;
+
+  font-family: "SoraThin", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.9;
+}
+
+#book .silent-kill-description p {
+  width: 100%;
+  margin: 0 0 20px;
+  text-align: center !important;
 }
 
 #book .silent-kill-back {
   display: block;
+  align-self: center;
   margin: 24px auto 0;
 }
+
+@media (max-width: 600px) {
+  #book.comic-view {
+    padding: 25px 20px;
+  }
+
+  #book .silent-kill-description {
+    font-size: 12px;
+  }
+}
+
