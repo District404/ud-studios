@@ -342,69 +342,24 @@ body {
 
 
 
-/* SILENT KILL: CENTERED LAYOUT */
-
-
-.comic-view[hidden] {
-  display: none !important;
-}
-
-
-.silent-kill-content .red-rule {
-  margin: 20px auto 30px;
-}
-
-
-
-.silent-kill-description p {
-  margin: 0 0 20px;
-  text-align: center;
-  font: inherit;
-}
-
-.silent-kill-description .silent-kill-ending {
-  color: #fff;
-  margin-top: 28px;
-  letter-spacing: .06em;
-}
-
-
-@media (max-width: 600px) {
-  .comic-view {
-    padding: 30px 20px;
-  }
-
-  .silent-kill-title {
-    font-size: 23px;
-  }
-
-  .silent-kill-description {
-    font-size: 12px;
-    line-height: 1.85;
-  }
-}
-
-
-/* FINAL SILENT KILL TITLE FIX */
-
-
-/* SILENT KILL: CENTER EVERYTHING */
+/* SILENT KILL PAGE: CENTERED AND COMPACT */
 
 #book.comic-view {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  box-sizing: border-box;
+  z-index: 100;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  box-sizing: border-box;
+  padding: 40px 24px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 30px 20px;
   text-align: center;
 }
 
@@ -413,23 +368,20 @@ body {
 }
 
 #book .silent-kill-content {
-  width: 100%;
-  max-width: 680px;
+  width: min(680px, 100%);
   margin: auto;
-  flex-shrink: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  text-align: center;
+  text-align: center !important;
 }
 
 #book h3.silent-kill-title {
   display: block;
   width: 100%;
   margin: 0;
-  padding: 0;
 
   font-family: "SoraThin", Arial, sans-serif !important;
   font-size: 18px !important;
@@ -440,39 +392,47 @@ body {
 }
 
 #book .red-rule {
-  margin: 20px auto 30px;
+  width: 24px;
+  height: 1px;
+  margin: 18px auto 25px;
 }
 
 #book .silent-kill-description {
   width: 100%;
   margin: 0;
-  text-align: center !important;
-
   font-family: "SoraThin", Arial, sans-serif;
   font-size: 13px;
   font-weight: 100;
-  line-height: 1.9;
+  line-height: 1.8;
+  letter-spacing: .01em;
+  color: #d0caca;
+  text-align: center !important;
 }
 
 #book .silent-kill-description p {
   width: 100%;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   text-align: center !important;
 }
 
+#book .silent-kill-description .silent-kill-ending {
+  color: #fff;
+}
+
 #book .silent-kill-back {
-  display: block;
   align-self: center;
-  margin: 24px auto 0;
+  margin: 20px auto 0;
 }
 
 @media (max-width: 600px) {
   #book.comic-view {
-    padding: 25px 20px;
+    padding: 30px 22px;
   }
 
   #book .silent-kill-description {
     font-size: 12px;
+    line-height: 1.8;
   }
 }
+
 
