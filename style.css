@@ -436,4 +436,24 @@ body {
   }
 }
 
+
+/* SILENT KILL GOTHIC DIVIDERS ONLY */
+
+#book .silent-kill-divider {
+  display: block;
+  width: min(420px, 85%);
+  height: auto;
+  object-fit: contain;
+  margin: 20px auto;
+  border: none;
+  background: transparent;
+}
+
+/* Smaller divider on phones */
+@media (max-width: 600px) {
+  #book .silent-kill-divider {
+    width: 90%;
+    margin: 14px auto;
+  }
+}
     
