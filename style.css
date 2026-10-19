@@ -458,3 +458,54 @@ body {
   }
 }
     
+
+/* RESPONSIVE PAGE FIX */
+
+html {
+  min-height: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#book.comic-view {
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+
+/* SILENT KILL RESPONSIVE CONTENT */
+
+#book .silent-kill-content {
+  box-sizing: border-box;
+  width: min(720px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+#book .silent-kill-description {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+#book .silent-kill-description p {
+  max-width: 100%;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  #book .silent-kill-content {
+    padding: 24px 16px;
+  }
+}
