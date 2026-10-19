@@ -439,12 +439,13 @@ body {
 
 /* SILENT KILL GOTHIC DIVIDERS ONLY */
 
+
 #book .silent-kill-divider {
   display: block;
-  width: min(420px, 85%);
+  width: min(220px, 65%);
   height: auto;
   object-fit: contain;
-  margin: 20px auto;
+  margin: 12px auto;
   border: none;
   background: transparent;
 }
