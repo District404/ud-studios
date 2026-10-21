@@ -437,26 +437,26 @@ body {
 }
 
 
-/* SILENT KILL GOTHIC DIVIDERS ONLY */
 
+/* SILENT KILL GOTHIC DIVIDERS */
 
 #book .silent-kill-divider {
   display: block;
   width: min(220px, 65%);
   height: auto;
   object-fit: contain;
-  margin: 12px auto;
+  margin: 3px auto;
   border: none;
   background: transparent;
 }
 
-/* Smaller divider on phones */
 @media (max-width: 600px) {
   #book .silent-kill-divider {
-    width: 90%;
-    margin: 14px auto;
+    width: min(180px, 65%);
+    margin: 3px auto;
   }
 }
+
     
 
 /* RESPONSIVE PAGE FIX */
@@ -489,7 +489,7 @@ body {
   width: min(720px, 100%);
   max-width: 100%;
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 12px 24px;
 }
 
 #book .silent-kill-description {
@@ -506,6 +506,6 @@ body {
 
 @media (max-width: 600px) {
   #book .silent-kill-content {
-    padding: 24px 16px;
+   padding: 12px 16px;
   }
 }
